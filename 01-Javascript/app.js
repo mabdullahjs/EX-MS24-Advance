@@ -227,3 +227,48 @@ function hello(index){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+// const bankBalance = 100000;
+// if(bankBalance > 500000){
+//     console.log('shaadi mubarak');
+// }else{
+//     console.log('meri rooh tumhara pass rhaigi....')
+// }
+
+// //ternary operator
+
+// bankBalance > 500000 ? console.log('shaadi mubarak') : console.log('meri rooh tumhara pass rhaigi....')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
