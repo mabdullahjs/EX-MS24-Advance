@@ -109,21 +109,21 @@ let mobiles = [
 //higher order function
 //call back function
 
-const div = document.querySelector('div');
+// const div = document.querySelector('div');
 
-mobiles.map((item , index)=>{
-    div.innerHTML += `
-    <h1>${item.name}</h1>
-    <h1>${item.price}</h1>
-    <button onclick="hello(${index})">add to cart</button>
-    <hr/>
-    `
-})
+// mobiles.map((item , index)=>{
+//     div.innerHTML += `
+//     <h1>${item.name}</h1>
+//     <h1>${item.price}</h1>
+//     <button onclick="hello(${index})">add to cart</button>
+//     <hr/>
+//     `
+// })
 
 
-function hello(index){
-    console.log(mobiles[index]);
-}
+// function hello(index){
+//     console.log(mobiles[index]);
+// }
 
 
 
@@ -235,20 +235,290 @@ function hello(index){
 
 
 
+// const fruits = ['mango' , 'banana' , 'orange' , 'watermelon' , ['guawa' , {
+//   username: 'abdullah',
+//   hobbies:['cricket' , 'swimming' , 'cooking']
+// }]]
+
+// console.log(fruits[4][1].hobbies[2])
 
 
 
 
-// const bankBalance = 100000;
-// if(bankBalance > 500000){
-//     console.log('shaadi mubarak');
-// }else{
-//     console.log('meri rooh tumhara pass rhaigi....')
+
+
+
+
+
+
+
+
+//spread operator
+
+
+// const students = ['abdullah' , 'usman' , 'ali'];
+// const students2 = ['ibad' , 'farooq' , 'adil'];
+
+// const thirdArr = [...students2 , ...students ]
+// console.log(thirdArr)
+
+
+
+
+
+
+
+//rest operator
+
+// function hello (...arg){
+//   console.log(arg)
 // }
 
-// //ternary operator
+// hello('abdullah' , 'usman' , 'ammar' , {} , [] , true , undefined , null)
 
-// bankBalance > 500000 ? console.log('shaadi mubarak') : console.log('meri rooh tumhara pass rhaigi....')
+
+//ternary operator
+
+
+// const totalMarks = 65;
+
+// if (totalMarks >= 90) {
+//   console.log('A grade')
+// } else if (totalMarks >= 70) {
+//   console.log('B grade');
+// } else if(totalMarks >= 60){
+//   console.log('C grade')
+// }
+// else {
+//   console.log('fail hogaya');
+// }
+
+// totalMarks >= 90 ? console.log('A grade') : totalMarks >= 70 ? console.log('B grade') :
+// totalMarks >= 60 ? console.log('C grade') : 
+// console.log('fail hogaya');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//object destructuring
+
+// const user = {
+//   username: 'abdullah',
+//   age: 21,
+//   email:'mabdullah2037@gmail.com',
+//   hobbies: ['cricket' , 'swimming']
+// }
+
+// const {username , age , email , hobbies} = user
+// console.log(username);
+
+
+
+
+
+//Array Destructuring
+
+// const students = ['abdullah' , 'usman' , 'ali'];
+// // const [username , username2 , username3] = students
+// const [,, username3] = students
+// console.log(username3)
+
+
+// const [phone1 , , , , , , ,phone6] = mobiles;
+// console.log(phone6);
+
+
+
+
+
+
+
+
+
+//object methods
+
+// const user = {
+//   username: 'abdullah',
+//   age: 21,
+//   email:'mabdullah2037@gmail.com',
+//   hobbies: ['cricket' , 'swimming']
+// }
+// user.extrakey = 'abc'
+// delete user.age
+// console.log(user);
+
+// const userArr = Object.entries(user);
+// console.log(userArr[3][1][1]);
+// console.log(Object.keys(user));
+// console.log(Object.values(user));
+// Object.freeze(user)
+// delete user.username
+// console.log(user.extrakey);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//closures
+
+// function outerFunction(){
+//   let a = 1;
+//   function innerfunc1(){
+//     let b = 10
+//     console.log(a);
+//   }
+//   function innerfunc2(){
+//     console.log(a);
+//     console.log(b)
+//   }
+//   return innerfunc2 
+// }
+
+// outerFunction()()
+// const val = outerFunction()
+// val()
+
+
+
+
+
+
+
+
+
+
+
+
+
+// try catch
+
+
+// let a = 10; //global variable
+
+// function hello() {
+//   let b = 20; // local variable
+//   console.log(a);
+// }
+// try {
+//   console.log(b);
+// } catch (error) {
+//   console.error('error araha ha' , error)
+// }
+// hello()
+
+
+
+
+
+// const hello = function (){
+//   console.log('hello world!')
+// }
+
+// hello()
+
+
+
+
+
+
+
+
+//arrow function
+
+
+// const hello = (username)=>{
+//   return `hello ${username}`
+// }
+
+// function hello(username){
+//   return `hello ${username}`
+// }
+
+// const hello = username => `hello ${username}`
+
+
+// console.log(hello('abdullah'));
+
+
+
+
+
+
+
+
+
+// const iteratedArr = mobiles.map(item => item)
+// const iteratedArr = mobiles.filter((item) => {
+//   return item.price < 10000
+// })
+// const iteratedArr = mobiles.filter(item => item.price < 10000)
+// console.log(iteratedArr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
