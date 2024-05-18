@@ -410,6 +410,35 @@ let mobiles = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //closures
 
 // function outerFunction(){
@@ -517,6 +546,343 @@ let mobiles = [
 
 
 
+
+
+
+
+// const arr = ['mango', 'orange', 'banana', 'guawa', 'watermelon', 'melon', 'chikoo'];
+
+// for (let i = 0; i < arr.length; i++) {
+//   console.log(arr[i])
+// }
+
+// const div = document.querySelector('div');
+
+// arr.map(function (item , index , arr){
+//   console.log(item)
+//   console.log(index)
+//   console.log(arr)
+//   div.innerHTML += `<h1>${item}</h1>`
+// })
+
+
+// hello()
+// function hello(){
+//   console.log('hello')
+// }
+
+
+
+// const obj = {
+//   username:'abdullah',
+//   func: ()=>{
+//     console.log(this.username);
+//   }
+// }
+
+// obj.func()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// console.log('hello');
+// // console.log('hello2'); // data mangwaya ha
+// console.log('hello3');
+
+
+
+// console.log('hello 1')
+// console.log('hello 2')
+// setTimeout(() => {
+//   console.log('hello 3')
+// }, 0);
+// console.log('hello 4')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//settimeout
+//setinterval
+//promises
+//async await
+//fetch
+//axios
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Promises
+// const bankBalance = 100000
+// const shaadi = new Promise((resolve, reject) => {
+//   setTimeout(function () {
+//     if (bankBalance > 200000) {
+//       resolve('shaadi mubarak')
+//     } else {
+//       reject('nahi hoskti')
+//     }
+//   }, 1000)
+
+// })
+
+// shaadi
+// .then((res)=>{
+//   console.log(res)
+// }).catch((err)=>{
+//   console.log('reject' , err)
+// })
+
+//.then .catch
+// async await
+
+
+
+// function axios(bankBalance) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (bankBalance > 200000) {
+//         resolve('shaadi Mubarak');
+//       } else {
+//         reject('nahi hoskti')
+//       }
+//     }, 1000)
+//   })
+// }
+
+
+// axios(1000000)
+// .then((res)=>{
+//   return res
+// }).then((res)=>{
+//   console.log(res)
+// })
+// .catch((err)=>{
+//   console.log(err)
+// })
+
+// const hello = async ()=>{}
+// async function hello() {
+//   try {
+//     const isTrue = await axios(2000);
+//     console.log(isTrue);
+//   } catch (error) {
+//     console.log('reject' , error);
+//   }
+// }
+
+// hello()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// fetch('https://jsonplaceholder.typicode.com/users')
+// .then((res)=>{
+//   return res.json()
+// }).then((res)=>{
+//   console.log(res)
+// })
+// .catch((err)=>{
+//   console.log(err);
+// })
+
+
+
+// axios('https://jsonplaceholder.typicode.com/users')
+// .then((res)=>{
+//   console.log(res.data)
+// }).catch((err)=>{
+//   console.log(err)
+// })
+
+
+
+
+
+
+
+
+
+
+// async function getData() {
+//   try {
+//     const res = await axios('https://jsonplaceholder.typicode.com/users');
+//     console.log(res.data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+// getData()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function hello() {
+  console.log('hello world')
+}
+
+function hello2() {
+  console.log('hello 2');
+}
+function hello3() {
+  console.log('hello 3');
+}
+function hello4() {
+  console.log('hello 4');
+}
+
+function mainFunc(){
+  console.log('export default');
+}
+
+// export {hello , hello2 , hello3 , hello4}
+
+export default mainFunc
 
 
 
