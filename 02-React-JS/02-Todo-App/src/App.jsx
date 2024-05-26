@@ -1,68 +1,95 @@
-import { useRef, useState } from "react";
+// import { useState } from "react";
+
+
+
+// function App() {
+//   const [num, setNum] = useState(1);
+//   // let num = 1;
+
+//   function addCounter() {
+
+//     // num += 1
+//     setNum(num + 1);
+//   }
+
+//   function lessCounter() {
+//     if(num > 0){
+//       setNum(num - 1);
+//     }
+//   }
+//   return (
+//     <>
+//       <h1>Hello world! {num}</h1>
+//       <button onClick={addCounter}>Add Counter</button>
+//       <button onClick={lessCounter}>less Counter</button>
+//     </>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import { useState } from "react";
+import { useRef } from "react";
 
 function App() {
+  //hooks kuch nahi 
+  const userInput = useRef();
+  const [todo, setTodo] = useState([]);
 
-  //hooks === normal js ka functions hain jo react na banai hua hain or export kra hua hain bus..
-
-  // let [count, setCount] = useState(0);
-
-
-  // function addCounter() {
-  //   setCount(count + 1);
-  // }
-
-  // function lessCounter() {
-  //   if(count > 0){
-  //     setCount(count - 1)
-  //   }
-  // }
-
-  // let [todo, setTodo] = useState(['a' , 'b' , 'c']);
-  let todo = ['a' , 'b' , 'c'];
-
-  let username = 'abdullah';
-  let user = {
-    username: 'abdullah',
-    email : 'mabdullah2037@gmail.com',
-    age: 20
+  const addTodo = () => {
+    console.log(userInput.current.value);
+    todo.push(userInput.current.value);
+    setTodo([...todo])
+    console.log(todo);
+    userInput.current.value = ''
   }
 
-  let userInput = useRef();
+  const deleteTodo = (index) => {
+    console.log('todo deleted', index);
+    todo.splice(index , 1);
+    setTodo([...todo])
+  }
 
-  const addTodo = (event)=>{
-    event.preventDefault()
-
-    console.log('todo added' , userInput.current.value)
-    userInput.current.value = ''
+  const editTodo = (index)=>{
+    const updatedValue = prompt('enter updated value')
   }
 
   return (
     <>
-      {/* <h1>Hello world {count}</h1>
-      <button onClick={addCounter}>count +</button>
-      <button onClick={lessCounter}>count -</button> */}
-
-      <h1>Todo App</h1>
-      <form onSubmit={addTodo}>
-        <input type="text" placeholder="enter todo" ref={userInput} />
-        <button type="submit">Add Todo</button>
-      </form>
-
+      <h1>Hello world!</h1>
+      <input type="text" placeholder="enter todo" ref={userInput} />
+      <button onClick={addTodo}>AddTodo</button>
       <ul>
-        {todo.map((item , index)=>{
+        {todo.map((item, index) => {
           return <li key={index}>{item}
+            <button onClick={() => deleteTodo(index)}>Delete</button>
+            <button onClick={()=>editTodo(index)}>Edit</button>
           </li>
         })}
-      </ul>
-
-      <h1>{username}</h1>
-      <ul>
-        <li>{user.username}</li>
-        <li>{user.email}</li>
-        <li>{user.age}</li>
       </ul>
     </>
   )
 }
 
 export default App
+
+
+
+
+
+
+
