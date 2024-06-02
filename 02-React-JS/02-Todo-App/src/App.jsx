@@ -65,7 +65,9 @@ function App() {
   }
 
   const editTodo = (index)=>{
-    const updatedValue = prompt('enter updated value')
+    const updatedValue = prompt('enter updated value');
+    todo.splice(index , 1 , updatedValue);
+    setTodo([...todo])
   }
 
   return (
